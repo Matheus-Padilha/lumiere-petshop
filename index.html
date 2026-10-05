@@ -1384,10 +1384,10 @@
     sizeBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         sizeBtns.forEach(b => {
-          b.classList.remove('border-forest-600', 'bg-forest-50', 'text-forest-800');
+          b.classList.remove('border-forest-600', 'bg-forest-50', 'text-forest-800', 'ring-2', 'ring-amberGold-500');
           b.classList.add('border-oat-border', 'bg-white', 'text-zinc-700');
         });
-        btn.classList.add('border-forest-600', 'bg-forest-50', 'text-forest-800');
+        btn.classList.add('border-forest-600', 'bg-forest-50', 'text-forest-800', 'ring-2', 'ring-amberGold-500');
         btn.classList.remove('border-oat-border', 'bg-white', 'text-zinc-700');
 
         currentBase = parseInt(btn.getAttribute('data-base'));
