@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumière Pet Spa & Boutique | O Refúgio de Bem-Estar do Seu Pet em Chapecó</title>
+  
+  <meta name="description" content="Pet Shop & Spa Boutique de alto padrão em Chapecó - SC. Banhos ozonizados, tosa tesoura asiática, hotel sem gaiolas, daycare cognitivo e medicina preventiva veterinária.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Google Fonts: DM Sans & Plus Jakarta Sans (Reference from Clay & Airbnb design systems) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            accent: ['"Space Grotesk"', 'sans-serif']
+          },
+          colors: {
+            forest: {
+              50: '#F2F7F4',
+              100: '#E1EFE7',
+              500: '#2D6A4F',
+              600: '#1B4332',
+              800: '#0F261C',
+              900: '#081711'
+            },
+            cream: {
+              50: '#FFFFFF',
+              100: '#FAF9F6',
+              200: '#F3EFE6',
+              300: '#E8E1D3',
+              400: '#DDD2BF'
+            },
+            amberGold: {
+              400: '#F6C358',
+              500: '#E9A825',
+              600: '#C68B1E'
+            },
+            oat: {
+              border: '#E8E3D8',
+              light: '#F5F2EB'
+            }
+          },
+          boxShadow: {
+            'clay': 'rgba(15, 38, 28, 0.08) 0px 2px 4px, rgba(15, 38, 28, 0.04) 0px -1px 1px inset, rgba(15, 38, 28, 0.03) 0px 8px 24px -4px',
+            'clay-hover': 'rgba(15, 38, 28, 0.12) 0px 12px 28px -6px, rgba(15, 38, 28, 0.06) 0px 4px 10px',
+            'airbnb-card': 'rgba(0,0,0,0.02) 0px 0px 0px 1px, rgba(0,0,0,0.04) 0px 2px 6px, rgba(0,0,0,0.08) 0px 4px 12px',
+            'hard': '-5px 5px 0px 0px #1B4332',
+            'hard-gold': '-4px 4px 0px 0px #C68B1E'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #FAF9F6;
+      color: #1A1F1D;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Clay Design System: Tactile Buttons and Inset Highlights */
+    .btn-tactile {
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-tactile:hover {
+      transform: translateY(-2px);
+      box-shadow: -4px 4px 0px 0px #1B4332;
+    }
+    .btn-tactile:active {
+      transform: translateY(1px);
+      box-shadow: -1px 1px 0px 0px #1B4332;
+    }
+
+    .btn-gold {
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: -4px 4px 0px 0px #0F261C;
+    }
+
+    /* Subtle oat texture backdrop */
+    .bg-pattern {
+      background-image: radial-gradient(#D5CEBE 0.75px, transparent 0.75px);
+      background-size: 24px 24px;
+    }
+
+    /* Custom pill scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FAF9F6;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D8D2C4;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #2D6A4F;
+    }
+  </style>
+</head>
+<body class="selection:bg-amberGold-400 selection:text-forest-900">
+
+  <!-- TOP BAR AVISO / STATUS -->
+  <aside aria-label="Aviso de atendimento" class="bg-forest-900 text-cream-100 text-xs py-2 px-4 border-b border-forest-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-forest-500/40 text-amberGold-400 font-bold text-[10px] tracking-wider uppercase border border-forest-500/50">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          Atendimento Aberto Hoje
+        </span>
+        <span class="text-zinc-300">Segunda a Sábado das 08h às 19h30 • Bairro Jardim Itália, Chapecó - SC</span>
+      </div>
+      <div class="flex items-center gap-4 text-zinc-300">
+        <a href="tel:4933220000" class="hover:text-amberGold-400 transition-colors flex items-center gap-1">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-amberGold-400"></i> (49) 3328-9898
+        </a>
+        <span class="text-forest-600">|</span>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-amberGold-400 transition-colors flex items-center gap-1">
+          <i data-lucide="instagram" class="w-3.5 h-3.5 text-amberGold-400"></i> @lumierepetspa
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-[#FAF9F6]/90 backdrop-blur-md border-b border-oat-border transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#inicio" class="flex items-center gap-3 group focus:outline-none">
+        <img src="logo.svg" alt="Lumière Pet Spa & Boutique" class="h-12 w-auto transition-transform group-hover:scale-[1.02]">
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-1 lg:gap-2 bg-white/70 px-3 py-1.5 rounded-full border border-oat-border shadow-xs">
+        <a href="#experiencia" class="px-3.5 py-1.5 text-xs lg:text-sm font-semibold text-zinc-700 hover:text-forest-600 rounded-full hover:bg-forest-50 transition-all">Experiência Spa</a>
+        <a href="#servicos" class="px-3.5 py-1.5 text-xs lg:text-sm font-semibold text-zinc-700 hover:text-forest-600 rounded-full hover:bg-forest-50 transition-all">Rituais & Estética</a>
+        <a href="#calculadora" class="px-3.5 py-1.5 text-xs lg:text-sm font-semibold text-zinc-700 hover:text-forest-600 rounded-full hover:bg-forest-50 transition-all">Simulador Online</a>
+        <a href="#planos" class="px-3.5 py-1.5 text-xs lg:text-sm font-semibold text-zinc-700 hover:text-forest-600 rounded-full hover:bg-forest-50 transition-all">Clube VIP</a>
+        <a href="#onde-estamos" class="px-3.5 py-1.5 text-xs lg:text-sm font-semibold text-zinc-700 hover:text-forest-600 rounded-full hover:bg-forest-50 transition-all">Contato</a>
+      </nav>
+
+      <!-- Right Action CTA -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="https://wa.me/5549999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20VIP%20na%20Lumi%C3%A8re%20Pet%20Spa." 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="btn-tactile inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-forest-600 text-white font-bold text-xs uppercase tracking-wider shadow-sm hover:bg-forest-500">
+          <i data-lucide="calendar" class="w-4 h-4 text-amberGold-400"></i>
+          <span>Agendar Horário</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuBtn" aria-label="Abrir menu de navegação" class="md:hidden p-2 rounded-lg text-forest-800 hover:bg-white border border-oat-border">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileDrawer" class="hidden md:hidden px-4 pt-2 pb-6 bg-[#FAF9F6] border-b border-oat-border space-y-3">
+      <a href="#experiencia" class="block py-2 text-sm font-semibold text-zinc-800 border-b border-oat-border">Experiência Spa</a>
+      <a href="#servicos" class="block py-2 text-sm font-semibold text-zinc-800 border-b border-oat-border">Rituais & Serviços</a>
+      <a href="#calculadora" class="block py-2 text-sm font-semibold text-zinc-800 border-b border-oat-border">Simulador de Valores</a>
+      <a href="#planos" class="block py-2 text-sm font-semibold text-zinc-800 border-b border-oat-border">Clube de Assinatura VIP</a>
+      <a href="#onde-estamos" class="block py-2 text-sm font-semibold text-zinc-800">Localização e Contato</a>
+      <a href="https://wa.me/5549999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio." 
+         class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-full bg-forest-600 text-white font-bold text-xs uppercase tracking-wider shadow-sm">
+        <i data-lucide="calendar" class="w-4 h-4 text-amberGold-400"></i>
+        <span>Agendar via WhatsApp</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="inicio" class="relative pt-12 pb-20 lg:pt-20 lg:pb-32 overflow-hidden bg-pattern border-b border-oat-border">
+    <!-- Ambient organic gradient glow -->
+    <div class="absolute top-1/4 -left-48 w-96 h-96 bg-amberGold-400/15 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-10 right-0 w-[500px] h-[500px] bg-forest-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Column: Copy & Value Proposition -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <!-- Badge Pill -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-oat-border shadow-xs">
+            <span class="flex h-2 w-2 relative">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amberGold-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-amberGold-500"></span>
+            </span>
+            <span class="text-xs font-bold text-forest-800 uppercase tracking-wider">Primeiro Pet Spa Conceito Fear-Free de Chapecó</span>
+          </div>
+
+          <!-- Headline -->
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-forest-900 leading-[1.08]">
+            O carinho e a sofisticação que o seu <span class="relative inline-block text-forest-500 underline decoration-amberGold-400 decoration-wavy decoration-2">melhor amigo</span> merece.
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="text-base sm:text-lg text-zinc-600 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            Esqueça o estresse de gaiolas barulhentas. Na <strong>Lumière</strong>, proporcionamos banhos relaxantes com água ozonizada, cromoterapia, tosa tesoura na técnica artística oriental, hotelaria boutique e acompanhamento veterinário humanizado.
+          </p>
+
+          <!-- Key Trust Checks -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-left">
+            <div class="flex items-center gap-2.5 p-2.5 rounded-lg bg-white/80 border border-oat-border shadow-2xs">
+              <div class="w-7 h-7 rounded-full bg-forest-50 text-forest-600 flex items-center justify-center shrink-0">
+                <i data-lucide="shield-check" class="w-4 h-4"></i>
+              </div>
+              <span class="text-xs font-semibold text-zinc-800">100% Sem Gaiolas ou Ansiedade</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-2.5 rounded-lg bg-white/80 border border-oat-border shadow-2xs">
+              <div class="w-7 h-7 rounded-full bg-amberGold-400/20 text-amberGold-600 flex items-center justify-center shrink-0">
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
+              </div>
+              <span class="text-xs font-semibold text-zinc-800">Água Ozonizada &amp; Toalhas Térmicas</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-2.5 rounded-lg bg-white/80 border border-oat-border shadow-2xs">
+              <div class="w-7 h-7 rounded-full bg-forest-50 text-forest-600 flex items-center justify-center shrink-0">
+                <i data-lucide="video" class="w-4 h-4"></i>
+              </div>
+              <span class="text-xs font-semibold text-zinc-800">Câmeras Ao Vivo para o Tutor</span>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a href="https://wa.me/5549999999999?text=Ol%C3%A1!%20Quero%20agendar%20um%20banho%20ou%20ritual%20de%20spa%20para%20meu%20pet." 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="btn-tactile w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-forest-600 hover:bg-forest-500 text-white font-extrabold text-sm uppercase tracking-wider shadow-clay">
+              <i data-lucide="message-circle" class="w-5 h-5 text-amberGold-400"></i>
+              <span>Agendar Banho ou Spa VIP</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+
+            <a href="#calculadora" 
+               class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-white hover:bg-cream-200 text-zinc-800 font-bold text-sm border border-oat-border shadow-xs transition-colors">
+              <i data-lucide="calculator" class="w-4 h-4 text-forest-600"></i>
+              <span>Simular Preço Online</span>
+            </a>
+          </div>
+
+          <!-- Social Proof micro-bar -->
+          <div class="pt-3 flex items-center justify-center lg:justify-start gap-3 text-xs text-zinc-500">
+            <div class="flex -space-x-2">
+              <img src="assets/client_golden.jpg" alt="Cliente" class="w-8 h-8 rounded-full border-2 border-white object-cover">
+              <img src="assets/client_frenchie.jpg" alt="Cliente" class="w-8 h-8 rounded-full border-2 border-white object-cover">
+              <img src="assets/client_cat.jpg" alt="Cliente" class="w-8 h-8 rounded-full border-2 border-white object-cover">
+            </div>
+            <div>
+              <div class="flex items-center text-amber-500">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                <span class="ml-1.5 font-bold text-zinc-800">4.9/5.0</span>
+              </div>
+              <span>Mais de <strong>380 famílias apaixonadas</strong> em Chapecó</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Visual Stage Composition -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          
+          <!-- Outer Decorative Card Frame (Clay/Airbnb aesthetic) -->
+          <div class="relative w-full max-w-md bg-white rounded-3xl p-4 border border-oat-border shadow-clay">
+            
+            <!-- Spa Environment Backdrop Photo -->
+            <div class="relative w-full h-[420px] rounded-2xl overflow-hidden bg-forest-900">
+              <img src="assets/hero_environment.jpg" alt="Salão Lumière Spa" class="w-full h-full object-cover brightness-[0.75]">
+              <div class="absolute inset-0 bg-gradient-to-t from-forest-900/90 via-forest-900/20 to-transparent"></div>
+              
+              <!-- Floating Cutout Pet with pure alpha -->
+              <img src="assets/hero_dog_cutout.png" alt="Pet Feliz Lumière" class="absolute bottom-2 left-1/2 -translate-x-1/2 w-[85%] max-w-[320px] drop-shadow-[0_20px_25px_rgba(0,0,0,0.6)] select-none pointer-events-none transition-transform duration-500 hover:scale-105">
+
+              <!-- Glass badge top left -->
+              <div class="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-forest-900/70 backdrop-blur-md border border-white/20 text-white text-[11px] font-bold">
+                <i data-lucide="heart" class="w-3.5 h-3.5 text-rose-400 fill-rose-400"></i>
+                <span>Tratamento com Amor &amp; Calma</span>
+              </div>
+
+              <!-- Top right badge -->
+              <div class="absolute top-4 right-4 bg-amberGold-500 text-forest-900 text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full shadow-md">
+                VIP Lounge
+              </div>
+
+              <!-- Floating Live Experience Card at bottom -->
+              <div class="absolute bottom-4 inset-x-4 p-3.5 rounded-xl bg-white/95 backdrop-blur-md border border-oat-border shadow-lg flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-lg bg-forest-50 flex items-center justify-center text-forest-600 font-bold text-xs">
+                    🛁
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold text-zinc-900">Banho com Aromaterapia de Lavanda</h4>
+                    <p class="text-[11px] text-zinc-500">Bethoven • Golden Retriever (Finalizado)</p>
+                  </div>
+                </div>
+                <span class="inline-flex items-center gap-1 text-[11px] font-bold text-forest-600 bg-forest-50 px-2 py-1 rounded-md">
+                  <i data-lucide="check" class="w-3 h-3"></i> 100% Relax
+                </span>
+              </div>
+            </div>
+
+            <!-- Supporting sub-bar -->
+            <div class="mt-4 flex items-center justify-between px-2 text-xs text-zinc-600 font-medium">
+              <span class="flex items-center gap-1.5">
+                <i data-lucide="sparkles" class="w-4 h-4 text-amberGold-500"></i>
+                Cosméticos Hipoalergênicos
+              </span>
+              <span class="text-oat-border">•</span>
+              <span class="flex items-center gap-1.5">
+                <i data-lucide="wind" class="w-4 h-4 text-forest-500"></i>
+                Secagem Silenciosa Low-Noise
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHT METRICS BAR -->
+  <section class="py-10 bg-white border-b border-oat-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        
+        <div class="p-4 rounded-2xl bg-cream-100 border border-oat-border">
+          <p class="text-3xl sm:text-4xl font-extrabold text-forest-600 tracking-tight">+4.200</p>
+          <p class="text-xs sm:text-sm font-semibold text-zinc-700 mt-1">Banhos &amp; Rituais Feitos</p>
+          <p class="text-[11px] text-zinc-400">Com registro fotográfico</p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-cream-100 border border-oat-border">
+          <p class="text-3xl sm:text-4xl font-extrabold text-amberGold-600 tracking-tight">4.9 ★</p>
+          <p class="text-xs sm:text-sm font-semibold text-zinc-700 mt-1">Nota Google Maps</p>
+          <p class="text-[11px] text-zinc-400">+380 avaliações 5 estrelas</p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-cream-100 border border-oat-border">
+          <p class="text-3xl sm:text-4xl font-extrabold text-forest-600 tracking-tight">0 Gaiolas</p>
+          <p class="text-xs sm:text-sm font-semibold text-zinc-700 mt-1">Ambiente 100% Livre</p>
+          <p class="text-[11px] text-zinc-400">Conceito humanizado Fear-Free</p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-cream-100 border border-oat-border">
+          <p class="text-3xl sm:text-4xl font-extrabold text-forest-900 tracking-tight">12 Anos</p>
+          <p class="text-xs sm:text-sm font-semibold text-zinc-700 mt-1">De Dedicação Animal</p>
+          <p class="text-[11px] text-zinc-400">Pioneiros em estética canina</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIÊNCIA & FILOSOFIA (CLAY DESIGN SYSTEM INSPIRATION) -->
+  <section id="experiencia" class="py-20 lg:py-28 bg-[#FAF9F6] relative border-b border-oat-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <span class="inline-block px-3 py-1 rounded-full bg-forest-100 text-forest-700 text-xs font-bold uppercase tracking-wider mb-3">
+          Por que a Lumière é diferente?
+        </span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-forest-900 tracking-tight">
+          Criamos o pet shop que nós sempre sonhamos para os nossos próprios filhos de 4 patas.
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-zinc-600 leading-relaxed">
+          Traduzimos a ciência do comportamento animal em um espaço terapêutico acolhedor. Onde outros veem rotatividade, nós oferecemos tempo, carinho e respeito individual.
+        </p>
+      </div>
+
+      <!-- Bento Grid de Pilares -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Card 1: Fear Free -->
+        <div class="rounded-3xl bg-white p-8 border border-oat-border shadow-airbnb-card hover:shadow-clay-hover transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-forest-50 border border-forest-100 text-forest-600 flex items-center justify-center mb-6">
+              <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-forest-900 mb-3">Protocolo 100% Fear-Free</h3>
+            <p class="text-sm text-zinc-600 leading-relaxed">
+              Animais não são colocados em jaulas de espera. Eles relaxam em caminhas ortopédicas higienizadas, com som ambiente de frequências calmantes e petiscos naturais positivos durante o manuseio.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-oat-border flex items-center gap-2 text-xs font-bold text-forest-600">
+            <i data-lucide="check-circle" class="w-4 h-4"></i> Zero traumas ou estresse pós-banho
+          </div>
+        </div>
+
+        <!-- Card 2: Glass Spa Transparente -->
+        <div class="rounded-3xl bg-white p-8 border border-oat-border shadow-airbnb-card hover:shadow-clay-hover transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-amberGold-400/20 border border-amberGold-400/30 text-amberGold-600 flex items-center justify-center mb-6">
+              <i data-lucide="eye" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-forest-900 mb-3">Espaço Glass Spa 100% Visível</h3>
+            <p class="text-sm text-zinc-600 leading-relaxed">
+              Nada fica escondido atrás de paredes. Toda a área de banho e tosa conta com vidros panorâmicos acústicos onde o tutor pode tomar um café artesanal enquanto assiste ao procedimento.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-oat-border flex items-center gap-2 text-xs font-bold text-amberGold-600">
+            <i data-lucide="coffee" class="w-4 h-4"></i> Lounge com Wi-Fi e café Nespresso
+          </div>
+        </div>
+
+        <!-- Card 3: Produtos de Alta Estética -->
+        <div class="rounded-3xl bg-white p-8 border border-oat-border shadow-airbnb-card hover:shadow-clay-hover transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-rose-50 border border-rose-100 text-rose-600 flex items-center justify-center mb-6">
+              <i data-lucide="gem" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-forest-900 mb-3">Cosméticos Veganos &amp; Ozônio</h3>
+            <p class="text-sm text-zinc-600 leading-relaxed">
+              Apenas linhas premium certificadas (Hydra Groomers &amp; Pet Society). Água enriquecida com nano-bolhas de ozônio que desinfeta a pele, previne dermatites e acelera a renovação da pelagem.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-oat-border flex items-center gap-2 text-xs font-bold text-rose-600">
+            <i data-lucide="droplet" class="w-4 h-4"></i> Proteção para peles atópicas e alérgicas
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVIÇOS & RITUAIS EXCLUSIVOS (AIRBNB CARD GRID STYLE) -->
+  <section id="servicos" class="py-20 lg:py-28 bg-white border-b border-oat-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-forest-600 block mb-2">Cardápio de Cuidados</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-forest-900 tracking-tight">Rituais de Estética &amp; Bem-Estar</h2>
+          <p class="text-zinc-600 mt-2 text-base max-w-xl">Cada procedimento é planejado para respeitar a fisiologia, pelagem e idade do seu pet.</p>
+        </div>
+
+        <!-- Filters / Category Pills -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0" id="serviceFilters">
+          <button class="filter-btn active px-4 py-2 rounded-full text-xs font-bold bg-forest-600 text-white shadow-xs" data-cat="all">Todos</button>
+          <button class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-cream-100 text-zinc-700 hover:bg-cream-200 border border-oat-border transition-colors" data-cat="spa">Banhos &amp; Spa</button>
+          <button class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-cream-100 text-zinc-700 hover:bg-cream-200 border border-oat-border transition-colors" data-cat="tosa">Tosas Artísticas</button>
+          <button class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-cream-100 text-zinc-700 hover:bg-cream-200 border border-oat-border transition-colors" data-cat="daycare">Hotel &amp; Daycare</button>
+          <button class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-cream-100 text-zinc-700 hover:bg-cream-200 border border-oat-border transition-colors" data-cat="felinos">Espaço Felino</button>
+        </div>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="servicesGrid">
+        
+        <!-- Item 1: Banho Ozonizado -->
+        <div class="service-card rounded-2xl border border-oat-border overflow-hidden bg-white shadow-airbnb-card hover:shadow-clay-hover transition-all duration-300 flex flex-col justify-between" data-category="spa">
+          <div class="relative h-56 overflow-hidden bg-zinc-100">
+            <img src="assets/spa_bath.jpg" alt="Banho Ozonizado Pet" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+            <span class="absolute top-3 left-3 bg-forest-600 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm">
+              Mais Pedido
+            </span>
+            <span class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm text-forest-900 text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+              A partir de R$ 75
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between text-xs text-zinc-500 mb-2 font-medium">
+                <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5 text-forest-500"></i> ~60 min</span>
+                <span class="text-amber-500 font-bold">★ 5.0 (180+ avaliações)</span>
+              </div>
+              <h3 class="text-lg font-bold text-forest-900 mb-2">Ritual Spa Ozonizado &amp; Hidratação</h3>
+              <p class="text-xs text-zinc-600 leading-relaxed">
+                Banho morno com hidromassagem terapêutica, água com ozônio desodorizante, máscara de colágeno botânico, higienização auricular e corte de unhas suave.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-oat-border flex items-center justify-between">
+              <span class="text-xs font-semibold text-forest-600 flex items-center gap-1">
+                <i data-lucide="sparkle" class="w-3 h-3 text-amberGold-500"></i> Toalhas 100% esterilizadas
+              </span>
+              <a href="https://wa.me/5549999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20Ritual%20Spa%20Ozonizado." 
+                 class="p-2 rounded-full bg-forest-50 text-forest-600 hover:bg-forest-600 hover:text-white transition-colors" title="Agendar">
+                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: Tosa Asiática Teddy Bear -->
+        <div class="service-card rounded-2xl border border-oat-border overflow-hidden bg-white shadow-airbnb-card hover:shadow-clay-hover transition-all duration-300 flex flex-col justify-between" data-category="tosa">
+          <div class="relative h-56 overflow-hidden bg-zinc-100">
+            <img src="assets/grooming_tosa.jpg" alt="Tosa Tesoura Estilo Asiático" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+            <span class="absolute top-3 left-3 bg-amberGold-500 text-forest-900 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm">
+              Especialidade da Casa
+            </span>
+            <span class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm text-forest-900 text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+              A partir de R$ 120
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between text-xs text-zinc-500 mb-2 font-medium">
+                <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5 text-forest-500"></i> ~90 a 120 min</span>
+                <span class="text-amber-500 font-bold">★ 5.0 Groomer Premiado</span>
+              </div>
+              <h3 class="text-lg font-bold text-forest-900 mb-2">Tosa Tesoura Oriental (Teddy Bear)</h3>
+              <p class="text-xs text-zinc-600 leading-relaxed">
+                Escultura artística de pelagem feita 100% à mão por groomers certificados. Deixa a cabecinha redonda, focinho fofo e patas aveludadas, sem marcas de máquina.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-oat-border flex items-center justify-between">
+              <span class="text-xs font-semibold text-forest-600 flex items-center gap-1">
+                <i data-lucide="scissors" class="w-3 h-3 text-amberGold-500"></i> Sem lâminas raspando a pele
+              </span>
+              <a href="https://wa.me/5549999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20Tosa%20Tesoura%20Teddy%20Bear." 
+                 class="p-2 rounded-full bg-forest-50 text-forest-600 hover:bg-forest-600 hover:text-white transition-colors" title="Agendar">
+                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Daycare & Recreação -->
+        <div class="service-card rounded-2xl border border-oat-border overflow-hidden bg-white shadow-airbnb-card hover:shadow-clay-hover transition-all duration-300 flex flex-col justify-between" data-category="daycare">
+          <div class="relative h-56 overflow-hidden bg-zinc-100">
+            <img src="assets/daycare_fun.jpg" alt="Daycare Lumière" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+            <span class="absolute top-3 left-3 bg-emerald-700 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm">
+              Socialização
+            </span>
+            <span class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm text-forest-900 text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+              Diária R$ 65
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between text-xs text-zinc-500 mb-2 font-medium">
+                <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5 text-forest-500"></i> 08h às 19h</span>
+                <span class="text-amber-500 font-bold">★ 4.9 Avaliação</span>
+              </div>
+              <h3 class="text-lg font-bold text-forest-900 mb-2">Creche &amp; Recreação Cognitiva</h3>
+              <p class="text-xs text-zinc-600 leading-relaxed">
+                Gramado natural amplo, piscina de bolinhas, circuitos de agilidade e brincadeiras cognitivas para gastar energia física e mental sob supervisão integral de monitores.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-oat-border flex items-center justify-between">
+              <span class="text-xs font-semibold text-forest-600 flex items-center gap-1">
+                <i data-lucide="camera" class="w-3 h-3 text-amberGold-500"></i> Relatório em fotos e vídeos diários
+              </span>
+              <a href="https://wa.me/5549999999999?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Daycare." 
+                 class="p-2 rounded-full bg-forest-50 text-forest-600 hover:bg-forest-600 hover:text-white transition-colors" title="Agendar">
+                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4: Suíte Felina Exclusiva -->
+        <div class="service-card rounded-2xl border border-oat-border overflow-hidden bg-white shadow-airbnb-card hover:shadow-clay-hover transition-all duration-300 flex flex-col justify-between" data-category="felinos">
+          <div class="relative h-56 overflow-hidden bg-zinc-100">
+            <img src="assets/cat_suite.jpg" alt="Suíte Cat Friendly" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+            <span class="absolute top-3 left-3 bg-purple-700 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm">
+              Cat Friendly
+            </span>
+            <span class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm text-forest-900 text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+              Diária R$ 70
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between text-xs text-zinc-500 mb-2 font-medium">
+                <span class="flex items-center gap-1"><i data-lucide="volume-x" class="w-3.5 h-3.5 text-forest-500"></i> 100% Acústico</span>
+                <span class="text-amber-500 font-bold">★ Espaço Sem Cães</span>
+              </div>
+              <h3 class="text-lg font-bold text-forest-900 mb-2">Hotel &amp; Spa Felino (Isolamento Acústico)</h3>
+              <p class="text-xs text-zinc-600 leading-relaxed">
+                Ala projetada exclusivamente para gatos, sem contato visual ou sonoro com cachorros. Difusores Feliway no ar, prateleiras verticais, pontes de madeira e enriquecimento gatificado.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-oat-border flex items-center justify-between">
+              <span class="text-xs font-semibold text-purple-700 flex items-center gap-1">
+                <i data-lucide="sparkles" class="w-3 h-3 text-purple-500"></i> Banho felino a seco e tosa higiênica
+              </span>
+              <a href="https://wa.me/5549999999999?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20o%20espa%C3%A7o%20felino." 
+                 class="p-2 rounded-full bg-forest-50 text-forest-600 hover:bg-forest-600 hover:text-white transition-colors" title="Agendar">
+                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5: Consulta Veterinária & Vacinação -->
+        <div class="service-card rounded-2xl border border-oat-border overflow-hidden bg-white shadow-airbnb-card hover:shadow-clay-hover transition-all duration-300 flex flex-col justify-between" data-category="spa">
+          <div class="relative h-56 overflow-hidden bg-zinc-100">
+            <img src="assets/vet_consult.jpg" alt="Veterinária Preventiva" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+            <span class="absolute top-3 left-3 bg-blue-700 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm">
+              Saúde Integrada
+            </span>
+            <span class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm text-forest-900 text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+              Consulta R$ 130
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between text-xs text-zinc-500 mb-2 font-medium">
+                <span class="flex items-center gap-1"><i data-lucide="stethoscope" class="w-3.5 h-3.5 text-blue-600"></i> CRMV Ativo</span>
+                <span class="text-amber-500 font-bold">★ Medicina Humanizada</span>
+              </div>
+              <h3 class="text-lg font-bold text-forest-900 mb-2">Check-up Preventivo &amp; Vacinas Éticas</h3>
+              <p class="text-xs text-zinc-600 leading-relaxed">
+                Consultório aconchegante sem aquele cheiro frio de hospital. Avaliação física completa, imunização importada (V10, Raiva, Gripe canina) e emissão de atestados de viagem.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-oat-border flex items-center justify-between">
+              <span class="text-xs font-semibold text-blue-700 flex items-center gap-1">
+                <i data-lucide="activity" class="w-3 h-3 text-blue-500"></i> Carteirinha digitalizada com lembretes
+              </span>
+              <a href="https://wa.me/5549999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20veterin%C3%A1ria." 
+                 class="p-2 rounded-full bg-forest-50 text-forest-600 hover:bg-forest-600 hover:text-white transition-colors" title="Agendar">
+                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6: Boutique & Nutrição Natural -->
+        <div class="service-card rounded-2xl border border-oat-border overflow-hidden bg-white shadow-airbnb-card hover:shadow-clay-hover transition-all duration-300 flex flex-col justify-between" data-category="spa">
+          <div class="relative h-56 overflow-hidden bg-zinc-100">
+            <img src="assets/boutique_fashion.jpg" alt="Boutique Pet Lumière" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+            <span class="absolute top-3 left-3 bg-amberGold-600 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm">
+              Curadoria Exclusiva
+            </span>
+            <span class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm text-forest-900 text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+              Loja Física
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between text-xs text-zinc-500 mb-2 font-medium">
+                <span class="flex items-center gap-1"><i data-lucide="shopping-bag" class="w-3.5 h-3.5 text-amberGold-600"></i> Acessórios &amp; Rações</span>
+                <span class="text-amber-500 font-bold">★ Design &amp; Conforto</span>
+              </div>
+              <h3 class="text-lg font-bold text-forest-900 mb-2">Boutique Gourmet &amp; Farmácia Especializada</h3>
+              <p class="text-xs text-zinc-600 leading-relaxed">
+                Seleção de petiscos 100% desidratados e naturais (sem transgênicos), guias de couro legítimo feitas à mão, brinquedos de enriquecimento ambiental e dermocosméticos.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-oat-border flex items-center justify-between">
+              <span class="text-xs font-semibold text-amberGold-700 flex items-center gap-1">
+                <i data-lucide="tag" class="w-3 h-3 text-amberGold-500"></i> Entrega grátis em compras no Clube
+              </span>
+              <a href="https://wa.me/5549999999999?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20os%20produtos%20da%20Boutique." 
+                 class="p-2 rounded-full bg-forest-50 text-forest-600 hover:bg-forest-600 hover:text-white transition-colors" title="Agendar">
+                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CALCULADORA / SIMULADOR DE SPA PET ONLINE (INTERACTIVE WIDGET) -->
+  <section id="calculadora" class="py-20 lg:py-28 bg-[#FAF9F6] border-b border-oat-border relative">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="inline-block px-3 py-1 rounded-full bg-amberGold-400/20 text-amberGold-600 text-xs font-bold uppercase tracking-wider mb-3">
+          Transparência Total de Valores
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-forest-900 tracking-tight">Simule o Banho ou Ritual do seu Pet</h2>
+        <p class="text-zinc-600 text-sm sm:text-base mt-2">Escolha o porte e os cuidados desejados para calcular uma estimativa instantânea e agendar com 1 clique.</p>
+      </div>
+
+      <!-- Simulator Card -->
+      <div class="rounded-3xl bg-white p-6 sm:p-10 border border-oat-border shadow-clay">
+        
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+          
+          <!-- Controls (Left 7 cols) -->
+          <div class="md:col-span-7 space-y-6">
+            
+            <!-- Step 1: Porte -->
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-forest-800 mb-3">
+                1. Qual é o porte do seu pet?
+              </label>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5" id="sizeSelector">
+                <button type="button" data-size="pequeno" data-base="75" class="size-btn active p-3 rounded-xl border border-forest-600 bg-forest-50 text-forest-800 text-center transition-all">
+                  <span class="block text-lg">🐶</span>
+                  <span class="text-xs font-bold block mt-1">Pequeno</span>
+                  <span class="text-[10px] text-zinc-500">Até 8kg</span>
+                </button>
+                <button type="button" data-size="medio" data-base="90" class="size-btn p-3 rounded-xl border border-oat-border bg-white hover:bg-cream-100 text-zinc-700 text-center transition-all">
+                  <span class="block text-lg">🐕</span>
+                  <span class="text-xs font-bold block mt-1">Médio</span>
+                  <span class="text-[10px] text-zinc-500">8 a 18kg</span>
+                </button>
+                <button type="button" data-size="grande" data-base="120" class="size-btn p-3 rounded-xl border border-oat-border bg-white hover:bg-cream-100 text-zinc-700 text-center transition-all">
+                  <span class="block text-lg">🦮</span>
+                  <span class="text-xs font-bold block mt-1">Grande</span>
+                  <span class="text-[10px] text-zinc-500">18 a 35kg</span>
+                </button>
+                <button type="button" data-size="felino" data-base="85" class="size-btn p-3 rounded-xl border border-oat-border bg-white hover:bg-cream-100 text-zinc-700 text-center transition-all">
+                  <span class="block text-lg">🐱</span>
+                  <span class="text-xs font-bold block mt-1">Gato</span>
+                  <span class="text-[10px] text-zinc-500">Cat Lounge</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2: Adicionais de Cuidado -->
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-forest-800 mb-3">
+                2. Quais cuidados especiais você deseja incluir?
+              </label>
+              <div class="space-y-2.5">
+                
+                <label class="flex items-center justify-between p-3.5 rounded-xl border border-oat-border hover:border-forest-500 hover:bg-cream-50 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" class="addon-check w-4 h-4 rounded text-forest-600 focus:ring-forest-500" value="45" data-name="Tosa Tesoura Estética">
+                    <div>
+                      <span class="text-xs font-bold text-zinc-800 block">Tosa Tesoura Oriental / Teddy Bear</span>
+                      <span class="text-[11px] text-zinc-500">Acabamento artístico e rostinho arredondado</span>
+                    </div>
+                  </div>
+                  <span class="text-xs font-bold text-forest-600">+ R$ 45</span>
+                </label>
+
+                <label class="flex items-center justify-between p-3.5 rounded-xl border border-oat-border hover:border-forest-500 hover:bg-cream-50 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" class="addon-check w-4 h-4 rounded text-forest-600 focus:ring-forest-500" value="30" data-name="Hidratação de Argan & Queratina">
+                    <div>
+                      <span class="text-xs font-bold text-zinc-800 block">Hidratação Profunda de Argan &amp; Queratina</span>
+                      <span class="text-[11px] text-zinc-500">Brilho espelhado e desembaraço suave</span>
+                    </div>
+                  </div>
+                  <span class="text-xs font-bold text-forest-600">+ R$ 30</span>
+                </label>
+
+                <label class="flex items-center justify-between p-3.5 rounded-xl border border-oat-border hover:border-forest-500 hover:bg-cream-50 cursor-pointer transition-all">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" class="addon-check w-4 h-4 rounded text-forest-600 focus:ring-forest-500" value="25" data-name="Táxi Pet Busca & Leva">
+                    <div>
+                      <span class="text-xs font-bold text-zinc-800 block">Táxi Pet Busca &amp; Leva Climatizado</span>
+                      <span class="text-[11px] text-zinc-500">Buscamos no seu endereço em Chapecó com cinto de segurança</span>
+                    </div>
+                  </div>
+                  <span class="text-xs font-bold text-forest-600">+ R$ 25</span>
+                </label>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Total & Booking Trigger (Right 5 cols) -->
+          <div class="md:col-span-5 bg-forest-900 rounded-2xl p-6 text-white flex flex-col justify-between h-full shadow-lg">
+            
+            <div>
+              <div class="flex items-center justify-between pb-4 border-b border-forest-800">
+                <span class="text-xs font-bold uppercase tracking-wider text-amberGold-400">Resumo Estimado</span>
+                <span class="text-[11px] text-zinc-400">Sem compromisso</span>
+              </div>
+
+              <div class="py-6 text-center">
+                <span class="text-xs text-zinc-400 uppercase tracking-widest block mb-1">Investimento Total</span>
+                <div class="flex items-baseline justify-center gap-1">
+                  <span class="text-xl font-bold text-amberGold-400">R$</span>
+                  <span id="totalDisplay" class="text-5xl font-black text-white tracking-tight">75</span>
+                  <span class="text-xs text-zinc-400">,00</span>
+                </div>
+                <p id="summaryText" class="text-xs text-zinc-300 mt-2">Porte Pequeno (Banho Ozonizado completo)</p>
+              </div>
+
+              <div class="space-y-2 text-xs text-zinc-300 border-t border-forest-800 pt-4">
+                <div class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-amberGold-400"></i>
+                  <span>Corte de unhas e limpeza de ouvidos inclusos</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-amberGold-400"></i>
+                  <span>Toalhas descartáveis e esterilizadas</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-amberGold-400"></i>
+                  <span>Perfume botânico francês hipoalergênico</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 pt-4">
+              <a id="calcWhatsappBtn" 
+                 href="https://wa.me/5549999999999?text=Ol%C3%A1!%20Fiz%20uma%20simula%C3%A7%C3%A3o%20no%20site%20da%20Lumi%C3%A8re:%20Pet%20Pequeno%20(R$%2075,00).%20Gostaria%20de%20agendar!" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 class="btn-gold w-full inline-flex items-center justify-center gap-2 py-4 px-6 rounded-full bg-amberGold-500 hover:bg-amberGold-400 text-forest-900 font-extrabold text-xs uppercase tracking-wider shadow-md">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>Agendar com Essa Simulação</span>
+              </a>
+              <p class="text-[10px] text-zinc-400 text-center mt-2">Valores finais podem variar conforme avaliação presencial da pelagem.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PLANOS DE ASSINATURA VIP (CLUBE LUMIÈRE) -->
+  <section id="planos" class="py-20 lg:py-28 bg-white border-b border-oat-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-widest text-forest-600 block mb-2">Clube de Assinatura</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-forest-900 tracking-tight">O Seu Pet Sempre Cheiroso, Saudável e Protegido</h2>
+        <p class="mt-3 text-base text-zinc-600">Assine um dos nossos pacotes mensais e garanta horários fixos sem fila, desconto na boutique e Táxi Pet cortesia.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        
+        <!-- Plano Essencial -->
+        <div class="rounded-3xl p-8 bg-[#FAF9F6] border border-oat-border shadow-airbnb-card flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-forest-900">Plano Quinzenal</h3>
+            <p class="text-xs text-zinc-500 mt-1">Ideal para pets de pelos curtos e rotina moderada.</p>
+            
+            <div class="my-6 pb-6 border-b border-oat-border">
+              <span class="text-xs text-zinc-400 uppercase font-bold">A partir de</span>
+              <div class="flex items-baseline gap-1 mt-1">
+                <span class="text-sm font-semibold text-zinc-600">R$</span>
+                <span class="text-4xl font-extrabold text-forest-900">140</span>
+                <span class="text-xs text-zinc-500">/mês</span>
+              </div>
+              <span class="text-[11px] text-forest-600 font-semibold block mt-1">2 Banhos Ozonizados por mês</span>
+            </div>
+
+            <ul class="space-y-3 text-xs text-zinc-700">
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-forest-600 shrink-0"></i>
+                <span>2 Banhos completos com água ozonizada</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-forest-600 shrink-0"></i>
+                <span>Higienização de ouvidos e corte de unhas</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-forest-600 shrink-0"></i>
+                <span>Escovação de dentes com gel enzimático</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-forest-600 shrink-0"></i>
+                <span>5% de desconto na Boutique e Farmácia</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-4">
+            <a href="https://wa.me/5549999999999?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Plano%20Quinzenal%20Lumi%C3%A8re." 
+               class="btn-tactile w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-white hover:bg-forest-50 text-forest-800 font-bold text-xs uppercase tracking-wider border border-oat-border shadow-xs">
+              <span>Assinar Quinzenal</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Plano VIP Semanal (Destaque) -->
+        <div class="relative rounded-3xl p-8 bg-forest-900 text-white border-2 border-amberGold-400 shadow-clay flex flex-col justify-between md:-translate-y-2">
+          
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-amberGold-500 text-forest-900 text-[10px] font-black uppercase tracking-widest px-4 py-1 rounded-full shadow-md">
+            Mais Escolhido Pelos Tutores
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-white">Plano Semanal VIP</h3>
+            <p class="text-xs text-zinc-300 mt-1">Cuidado contínuo com pelagem perfeita e zero estresse.</p>
+            
+            <div class="my-6 pb-6 border-b border-forest-800">
+              <span class="text-xs text-amberGold-400 uppercase font-bold">A partir de</span>
+              <div class="flex items-baseline gap-1 mt-1">
+                <span class="text-sm font-semibold text-zinc-400">R$</span>
+                <span class="text-4xl font-extrabold text-white">260</span>
+                <span class="text-xs text-zinc-400">/mês</span>
+              </div>
+              <span class="text-[11px] text-amberGold-400 font-semibold block mt-1">4 Banhos Ozonizados + Hidratação</span>
+            </div>
+
+            <ul class="space-y-3 text-xs text-zinc-200">
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-amberGold-400 shrink-0"></i>
+                <span><strong>4 Banhos relaxantes</strong> no mês com horário garantido</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-amberGold-400 shrink-0"></i>
+                <span><strong>1 Hidratação profunda</strong> de Queratina botânica grátis</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-amberGold-400 shrink-0"></i>
+                <span>Tosa higiênica e tosa de patinhas inclusas</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-amberGold-400 shrink-0"></i>
+                <span><strong>50% de desconto</strong> no Táxi Pet Busca &amp; Leva</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-amberGold-400 shrink-0"></i>
+                <span>10% de desconto em toda a boutique e hotel</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-4">
+            <a href="https://wa.me/5549999999999?text=Ol%C3%A1!%20Quero%20assinar%20o%20Plano%20Semanal%20VIP%20Lumi%C3%A8re." 
+               class="btn-gold w-full inline-flex items-center justify-center gap-2 py-3.5 px-4 rounded-full bg-amberGold-500 hover:bg-amberGold-400 text-forest-900 font-extrabold text-xs uppercase tracking-wider shadow-md">
+              <i data-lucide="sparkles" class="w-4 h-4"></i>
+              <span>Garantir Vaga no Clube VIP</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Plano All-Inclusive Executive -->
+        <div class="rounded-3xl p-8 bg-[#FAF9F6] border border-oat-border shadow-airbnb-card flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-forest-900">Plano All-Inclusive Royale</h3>
+            <p class="text-xs text-zinc-500 mt-1">Para tutores exigentes que querem comodidade absoluta.</p>
+            
+            <div class="my-6 pb-6 border-b border-oat-border">
+              <span class="text-xs text-zinc-400 uppercase font-bold">A partir de</span>
+              <div class="flex items-baseline gap-1 mt-1">
+                <span class="text-sm font-semibold text-zinc-600">R$</span>
+                <span class="text-4xl font-extrabold text-forest-900">420</span>
+                <span class="text-xs text-zinc-500">/mês</span>
+              </div>
+              <span class="text-[11px] text-forest-600 font-semibold block mt-1">Banhos semanais + Tosa + Táxi Grátis</span>
+            </div>
+
+            <ul class="space-y-3 text-xs text-zinc-700">
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-forest-600 shrink-0"></i>
+                <span>4 Banhos Ozonizados + 1 Tosa Tesoura mensal</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-forest-600 shrink-0"></i>
+                <span><strong>Táxi Pet 100% CORTESIA</strong> todas as semanas</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-forest-600 shrink-0"></i>
+                <span>Consulta veterinária semestral preventiva</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-forest-600 shrink-0"></i>
+                <span>Prioridade em feriados e datas comemorativas</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-4">
+            <a href="https://wa.me/5549999999999?text=Ol%C3%A1!%20Quero%20conhecer%20o%20Plano%20All-Inclusive%20Royale." 
+               class="btn-tactile w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-white hover:bg-forest-50 text-forest-800 font-bold text-xs uppercase tracking-wider border border-oat-border shadow-xs">
+              <span>Assinar All-Inclusive</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS DE TUTORES (AVALIAÇÕES REAIS) -->
+  <section class="py-20 lg:py-28 bg-[#FAF9F6] border-b border-oat-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-widest text-forest-600 block mb-2">Comunidade Apaixonada</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-forest-900 tracking-tight">O que dizem os pais e mães de pets</h2>
+        <p class="text-zinc-600 text-sm mt-2">Transparência que você pode checar diretamente no nosso Google Maps.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="p-6 sm:p-8 rounded-3xl bg-white border border-oat-border shadow-airbnb-card flex flex-col justify-between">
+          <div>
+            <div class="flex items-center text-amber-500 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-xs sm:text-sm text-zinc-700 leading-relaxed italic">
+              "Meu Golden sempre voltava tremendo de outros pet shops por causa do barulho dos sopradores e das gaiolas. Na Lumière foi a primeira vez que ele saiu abanando o rabo e relaxado! O banho ozonizado eliminou uma alergia crônica que ele tinha."
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-oat-border flex items-center gap-3">
+            <img src="assets/client_golden.jpg" alt="Tutor Rafael" class="w-10 h-10 rounded-full object-cover border border-oat-border">
+            <div>
+              <p class="text-xs font-bold text-zinc-900">Dr. Rafael Albuquerque</p>
+              <p class="text-[11px] text-zinc-500">Tutor do Bento (Golden Retriever)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 sm:p-8 rounded-3xl bg-white border border-oat-border shadow-airbnb-card flex flex-col justify-between">
+          <div>
+            <div class="flex items-center text-amber-500 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-xs sm:text-sm text-zinc-700 leading-relaxed italic">
+              "A tosa tesoura estilo oriental na minha Spitz ficou uma verdadeira obra de arte! Parecia um ursinho de pelúcia vivo. E o atendimento da equipe é impecável, eles mandam fotos no WhatsApp em cada etapa."
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-oat-border flex items-center gap-3">
+            <img src="assets/client_frenchie.jpg" alt="Tutora Camila" class="w-10 h-10 rounded-full object-cover border border-oat-border">
+            <div>
+              <p class="text-xs font-bold text-zinc-900">Camila Medeiros</p>
+              <p class="text-[11px] text-zinc-500">Tutora da Amora (Spitz Alemão)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 sm:p-8 rounded-3xl bg-white border border-oat-border shadow-airbnb-card flex flex-col justify-between">
+          <div>
+            <div class="flex items-center text-amber-500 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-xs sm:text-sm text-zinc-700 leading-relaxed italic">
+              "É quase impossível encontrar um pet shop em Chapecó que realmente entenda de felinos. A sala isolada sem cães fez toda a diferença. O Oliver fez a hidratação e nem precisou de sedação. Ganharam uma cliente fiel!"
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-oat-border flex items-center gap-3">
+            <img src="assets/client_cat.jpg" alt="Tutora Beatriz" class="w-10 h-10 rounded-full object-cover border border-oat-border">
+            <div>
+              <p class="text-xs font-bold text-zinc-900">Beatriz Zanella</p>
+              <p class="text-[11px] text-zinc-500">Tutora do Oliver (Gato Persa)</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LOCALIZAÇÃO & CONTATO (MAP SECTION) -->
+  <section id="onde-estamos" class="py-20 lg:py-28 bg-white border-b border-oat-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Info Column -->
+        <div class="lg:col-span-6 space-y-6">
+          <span class="inline-block px-3 py-1 rounded-full bg-forest-100 text-forest-700 text-xs font-bold uppercase tracking-wider">
+            Fácil Acesso &amp; Estacionamento
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-forest-900 tracking-tight">
+            Venha tomar um café conosco no Jardim Itália.
+          </h2>
+          <p class="text-zinc-600 text-sm sm:text-base leading-relaxed">
+            Estamos localizados em uma rua calma e arborizada, com vagas exclusivas de estacionamento em frente à loja para embarque e desembarque seguro do seu pet.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-cream-100 border border-oat-border">
+              <div class="w-10 h-10 rounded-xl bg-white text-forest-600 flex items-center justify-center shrink-0 border border-oat-border shadow-2xs">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold uppercase tracking-wider text-forest-900">Endereço</h4>
+                <p class="text-sm text-zinc-700 mt-0.5">Rua Achiles Tomazeli, 450-E • Bairro Jardim Itália</p>
+                <p class="text-xs text-zinc-400">Chapecó - SC, CEP 89814-000</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-cream-100 border border-oat-border">
+              <div class="w-10 h-10 rounded-xl bg-white text-forest-600 flex items-center justify-center shrink-0 border border-oat-border shadow-2xs">
+                <i data-lucide="clock" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold uppercase tracking-wider text-forest-900">Horários de Atendimento</h4>
+                <p class="text-sm text-zinc-700 mt-0.5">Segunda a Sexta: <strong>08:00 às 19:30</strong> (Sem fechar ao meio-dia)</p>
+                <p class="text-xs text-zinc-500">Sábados: <strong>08:00 às 16:30</strong> • Domingos: Plantão para hóspedes</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-cream-100 border border-oat-border">
+              <div class="w-10 h-10 rounded-xl bg-white text-forest-600 flex items-center justify-center shrink-0 border border-oat-border shadow-2xs">
+                <i data-lucide="truck" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold uppercase tracking-wider text-forest-900">Táxi Pet Leva &amp; Traz</h4>
+                <p class="text-sm text-zinc-700 mt-0.5">Atendemos todos os bairros de Chapecó com veículo 100% climatizado.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="pt-4 flex flex-wrap gap-4">
+            <a href="https://maps.google.com/?q=Lumiere+Pet+Spa+Chapeco" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="btn-tactile inline-flex items-center gap-2 px-6 py-3 rounded-full bg-forest-600 hover:bg-forest-500 text-white font-bold text-xs uppercase tracking-wider shadow-sm">
+              <i data-lucide="navigation" class="w-4 h-4 text-amberGold-400"></i>
+              <span>Abrir no Google Maps</span>
+            </a>
+
+            <a href="https://wa.me/5549999999999?text=Ol%C3%A1!%20Gostaria%20de%20saber%20se%20o%20T%C3%A1xi%20Pet%20atende%20meu%20bairro." 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white hover:bg-cream-100 text-zinc-800 font-bold text-xs uppercase tracking-wider border border-oat-border shadow-xs transition-colors">
+              <i data-lucide="message-circle" class="w-4 h-4 text-forest-600"></i>
+              <span>Chamar Táxi Pet</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Google Maps Clean Mockup Container -->
+        <div class="lg:col-span-6">
+          <div class="rounded-3xl overflow-hidden border border-oat-border shadow-clay bg-zinc-100 p-2">
+            <div class="rounded-2xl overflow-hidden relative h-[440px] bg-forest-900">
+              <!-- Static Styled Map Representation -->
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3551.492582736173!2d-52.6185854!3d-27.1084285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e4b693e50b1d7d%3A0x6b1cf9e1591fef27!2sChapec%C3%B3%2C%20SC!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+                width="100%" 
+                height="100%" 
+                style="border:0; filter: contrast(1.05) saturate(1.1);" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+              
+              <!-- Floating Location Pin Card -->
+              <div class="absolute top-4 left-4 p-3 rounded-xl bg-white/95 backdrop-blur-md border border-oat-border shadow-md flex items-center gap-3">
+                <div class="w-8 h-8 rounded-full bg-forest-600 text-amberGold-400 flex items-center justify-center font-bold text-xs">
+                  ★
+                </div>
+                <div>
+                  <p class="text-xs font-bold text-zinc-900">Lumière Pet Spa &amp; Boutique</p>
+                  <p class="text-[10px] text-zinc-500">Jardim Itália • Chapecó - SC</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA FINAL BANNER -->
+  <section class="py-16 bg-forest-900 text-white relative overflow-hidden">
+    <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-amberGold-400/10 rounded-full blur-3xl"></div>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
+      
+      <span class="inline-block px-3 py-1 rounded-full bg-forest-800 text-amberGold-400 text-xs font-bold uppercase tracking-wider">
+        Reserve o Horário do Seu Filho de 4 Patas
+      </span>
+
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+        Seu pet merece viver a experiência Lumière hoje mesmo.
+      </h2>
+
+      <p class="text-zinc-300 text-sm sm:text-base max-w-xl mx-auto font-light">
+        Agende pelo WhatsApp em menos de 1 minuto. Nossa equipe está pronta para indicar o melhor ritual para a idade e pelagem dele.
+      </p>
+
+      <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://wa.me/5549999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20VIP%20na%20Lumi%C3%A8re." 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="btn-gold w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-amberGold-500 hover:bg-amberGold-400 text-forest-900 font-black text-xs uppercase tracking-wider shadow-lg">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Falar com Concierge no WhatsApp</span>
+        </a>
+
+        <a href="tel:4933289898" 
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-forest-800 hover:bg-forest-700 text-white font-bold text-xs uppercase tracking-wider border border-forest-700 transition-colors">
+          <i data-lucide="phone" class="w-4 h-4 text-amberGold-400"></i>
+          <span>Ligar (49) 3328-9898</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#FAF9F6] border-t border-oat-border pt-16 pb-12 text-zinc-600 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        
+        <!-- Col 1: Brand -->
+        <div class="space-y-4">
+          <img src="logo.svg" alt="Lumière Pet Spa" class="h-10 w-auto">
+          <p class="text-xs text-zinc-500 leading-relaxed">
+            O primeiro pet spa conceito com protocolo Fear-Free, banhos ozonizados e estética artística em Chapecó - SC.
+          </p>
+          <div class="flex items-center gap-3 pt-1">
+            <a href="#" class="w-8 h-8 rounded-full bg-white border border-oat-border text-forest-700 hover:bg-forest-600 hover:text-white flex items-center justify-center transition-colors">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-full bg-white border border-oat-border text-forest-700 hover:bg-forest-600 hover:text-white flex items-center justify-center transition-colors">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Serviços -->
+        <div>
+          <h4 class="font-bold text-forest-900 uppercase tracking-wider mb-4">Rituais &amp; Cuidados</h4>
+          <ul class="space-y-2.5">
+            <li><a href="#servicos" class="hover:text-forest-600 transition-colors">Banho Ozonizado Relaxante</a></li>
+            <li><a href="#servicos" class="hover:text-forest-600 transition-colors">Tosa Tesoura Estilo Asiático</a></li>
+            <li><a href="#servicos" class="hover:text-forest-600 transition-colors">Hotelaria &amp; Daycare Cognitivo</a></li>
+            <li><a href="#servicos" class="hover:text-forest-600 transition-colors">Suíte Felina Acústica Cat Friendly</a></li>
+            <li><a href="#servicos" class="hover:text-forest-600 transition-colors">Medicina Veterinária Preventiva</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Navegação -->
+        <div>
+          <h4 class="font-bold text-forest-900 uppercase tracking-wider mb-4">Informações</h4>
+          <ul class="space-y-2.5">
+            <li><a href="#experiencia" class="hover:text-forest-600 transition-colors">Nossa Filosofia Fear-Free</a></li>
+            <li><a href="#calculadora" class="hover:text-forest-600 transition-colors">Simulador de Valores</a></li>
+            <li><a href="#planos" class="hover:text-forest-600 transition-colors">Clube de Assinatura VIP</a></li>
+            <li><a href="#onde-estamos" class="hover:text-forest-600 transition-colors">Onde Estamos em Chapecó</a></li>
+            <li><span class="text-zinc-400">CRMV-SC Responsável: Dra. Júlia Ramos (CRMV 8492)</span></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contato Rápido -->
+        <div>
+          <h4 class="font-bold text-forest-900 uppercase tracking-wider mb-4">Atendimento</h4>
+          <div class="space-y-2 text-zinc-500">
+            <p><strong class="text-zinc-800">Telefone:</strong> (49) 3328-9898</p>
+            <p><strong class="text-zinc-800">WhatsApp:</strong> (49) 99999-9999</p>
+            <p><strong class="text-zinc-800">Endereço:</strong> R. Achiles Tomazeli, 450-E</p>
+            <p>Jardim Itália, Chapecó - SC</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-oat-border flex flex-col sm:flex-row items-center justify-between gap-4 text-zinc-400 text-[11px]">
+        <p>© 2026 Lumière Pet Spa &amp; Boutique Ltda. Todos os direitos reservados. Chapecó - SC.</p>
+        <p class="flex items-center gap-1">
+          Desenvolvido com carinho para negócios de alto padrão.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <div class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
+    <div class="hidden sm:flex items-center bg-white px-3.5 py-1.5 rounded-full border border-oat-border shadow-md text-xs font-semibold text-zinc-800 animate-bounce">
+      🐾 Horários disponíveis hoje!
+    </div>
+    <a href="https://wa.me/5549999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20banho%20ou%20servi%C3%A7o%20para%20meu%20pet." 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-all"
+       aria-label="WhatsApp">
+      <i data-lucide="message-circle" class="w-7 h-7"></i>
+    </a>
+  </div>
+
+  <!-- INTERACTIVE CLIENT-SIDE LOGIC -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    if (mobileBtn && mobileDrawer) {
+      mobileBtn.addEventListener('click', () => {
+        mobileDrawer.classList.toggle('hidden');
+      });
+    }
+
+    // Service Filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const serviceCards = document.querySelectorAll('.service-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+          b.classList.remove('active', 'bg-forest-600', 'text-white');
+          b.classList.add('bg-cream-100', 'text-zinc-700');
+        });
+        btn.classList.add('active', 'bg-forest-600', 'text-white');
+        btn.classList.remove('bg-cream-100', 'text-zinc-700');
+
+        const cat = btn.getAttribute('data-cat');
+        serviceCards.forEach(card => {
+          if (cat === 'all' || card.getAttribute('data-category') === cat) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Pet Spa Price Calculator
+    let currentBase = 75;
+    let currentSizeName = 'Pequeno (Até 8kg)';
+    const sizeBtns = document.querySelectorAll('.size-btn');
+    const addonChecks = document.querySelectorAll('.addon-check');
+    const totalDisplay = document.getElementById('totalDisplay');
+    const summaryText = document.getElementById('summaryText');
+    const calcWhatsappBtn = document.getElementById('calcWhatsappBtn');
+
+    function updatePrice() {
+      let total = currentBase;
+      const selectedAddons = [];
+
+      addonChecks.forEach(chk => {
+        if (chk.checked) {
+          total += parseInt(chk.value);
+          selectedAddons.push(chk.getAttribute('data-name'));
+        }
+      });
+
+      totalDisplay.textContent = total;
+      
+      let summary = `Porte ${currentSizeName}`;
+      if (selectedAddons.length > 0) {
+        summary += ` + ${selectedAddons.join(', ')}`;
+      } else {
+        summary += ' (Banho Ozonizado essencial)';
+      }
+      summaryText.textContent = summary;
+
+      const encodedMsg = encodeURIComponent(
+        `Olá! Fiz uma simulação de spa no site da Lumière:\n• Porte: ${currentSizeName}\n• Cuidados: ${selectedAddons.length > 0 ? selectedAddons.join(', ') : 'Banho Ozonizado Essencial'}\n• Valor Estimado: R$ ${total},00\n\nGostaria de agendar o melhor horário!`
+      );
+      calcWhatsappBtn.href = `https://wa.me/5549999999999?text=${encodedMsg}`;
+    }
+
+    sizeBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        sizeBtns.forEach(b => {
+          b.classList.remove('border-forest-600', 'bg-forest-50', 'text-forest-800');
+          b.classList.add('border-oat-border', 'bg-white', 'text-zinc-700');
+        });
+        btn.classList.add('border-forest-600', 'bg-forest-50', 'text-forest-800');
+        btn.classList.remove('border-oat-border', 'bg-white', 'text-zinc-700');
+
+        currentBase = parseInt(btn.getAttribute('data-base'));
+        currentSizeName = btn.querySelector('.text-xs').textContent;
+        updatePrice();
+      });
+    });
+
+    addonChecks.forEach(chk => {
+      chk.addEventListener('change', updatePrice);
+    });
+
+    // Initial update
+    updatePrice();
+  </script>
+
+</body>
+</html>

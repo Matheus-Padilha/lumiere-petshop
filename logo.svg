@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 90" fill="none">
+  <!-- Emblem Circle -->
+  <g transform="translate(10, 5)">
+    <circle cx="40" cy="40" r="38" fill="#2D6A4F" />
+    <circle cx="40" cy="40" r="34" stroke="#E9A825" stroke-width="1.5" stroke-dasharray="3 2" fill="none" opacity="0.6" />
+    
+    <!-- Stylized Heart Paw -->
+    <!-- Main pad as heart -->
+    <path d="M40 52 C35 46 27 41 27 34 C27 28 32 25 36 27 C38 28 39.5 30 40 31 C40.5 30 42 28 44 27 C48 25 53 28 53 34 C53 41 45 46 40 52 Z" fill="#FAF9F6" />
+    <!-- 4 Toe pads -->
+    <ellipse cx="27" cy="24" rx="3.5" ry="5" transform="rotate(-25 27 24)" fill="#E9A825" />
+    <ellipse cx="35" cy="18" rx="3.5" ry="5" transform="rotate(-10 35 18)" fill="#FAF9F6" />
+    <ellipse cx="45" cy="18" rx="3.5" ry="5" transform="rotate(10 45 18)" fill="#FAF9F6" />
+    <ellipse cx="53" cy="24" rx="3.5" ry="5" transform="rotate(25 53 24)" fill="#E9A825" />
+    <!-- Small star spark -->
+    <path d="M40 10 L41 12.5 L43.5 13.5 L41 14.5 L40 17 L39 14.5 L36.5 13.5 L39 12.5 Z" fill="#E9A825" />
+  </g>
+  
+  <!-- Typography -->
+  <text x="102" y="46" font-family="'Plus Jakarta Sans', 'DM Sans', -apple-system, sans-serif" font-size="32" font-weight="800" fill="#1B4332" letter-spacing="1.5">LUMIÈRE</text>
+  <text x="104" y="67" font-family="'Plus Jakarta Sans', 'DM Sans', -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#C68B1E" letter-spacing="3.5">PET SPA &amp; BOUTIQUE</text>
+</svg>

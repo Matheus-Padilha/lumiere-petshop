@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="16" fill="#2D6A4F" />
+  <circle cx="32" cy="32" r="28" stroke="#E9A825" stroke-width="1.5" fill="none" opacity="0.5" />
+  <!-- Main pad as heart -->
+  <path d="M32 43 C27 38 20 33 20 27 C20 22 24 19 28 21 C30 22 31 24 32 25 C33 24 34 22 36 21 C40 19 44 22 44 27 C44 33 37 38 32 43 Z" fill="#FAF9F6" />
+  <ellipse cx="21" cy="18" rx="3" ry="4.5" transform="rotate(-20 21 18)" fill="#E9A825" />
+  <ellipse cx="28" cy="13" rx="3" ry="4.5" transform="rotate(-8 28 13)" fill="#FAF9F6" />
+  <ellipse cx="36" cy="13" rx="3" ry="4.5" transform="rotate(8 36 13)" fill="#FAF9F6" />
+  <ellipse cx="43" cy="18" rx="3" ry="4.5" transform="rotate(20 43 18)" fill="#E9A825" />
+</svg>
